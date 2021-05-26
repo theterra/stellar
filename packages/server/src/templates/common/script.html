@@ -1,0 +1,13 @@
+{% if(isProd) %}
+<script
+  crossorigin
+  src="https://unpkg.com/react@16/umd/react.production.min.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+></script>
+{% endif %} {% if serverConfig.js_assets %} {% for file in
+serverConfig.js_assets %}
+<script src="{{ file | jslink }}" defer></script>
+{% endfor %} {% endif %}

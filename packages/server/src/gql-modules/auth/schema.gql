@@ -1,0 +1,10 @@
+#import "gql-modules/auth/enums.gql"
+
+type Query {
+  me: User
+}
+
+type User {
+  id: ID!
+  username: String
+}

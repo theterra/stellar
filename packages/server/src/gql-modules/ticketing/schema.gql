@@ -1,0 +1,17 @@
+#import "gql-modules/auth/directives.gql"
+
+type Query {
+    ticket(id: ID!): Ticket @authenticated @authorized(role: [ADMIN])
+    tickets: [Tickets] @authenticated
+}
+
+type Ticket {
+    id: ID!
+    title: String
+    content: String
+    user: String
+}
+
+type Tickets {
+    id: ID
+}

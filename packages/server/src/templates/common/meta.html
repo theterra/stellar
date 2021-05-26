@@ -1,0 +1,21 @@
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta charset="{{ metaInfo.charset }}" />
+
+  {% for link in serverConfig.preconnect %}
+  <link rel="preconnect" href="{{ link }}" />
+  {% endfor %}
+
+  <meta
+    name="viewport"
+    content="height=device-height,width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+  />
+  <meta name="full-screen" content="yes" />
+  <link rel="icon" href="data:," />
+
+  <title>{{metaInfo.title}}</title>
+
+  {% for link in serverConfig.preload_images %}
+  <link rel="prefetch" as="image" href="{{ link }}" />
+  {% endfor %} {%- include "common/favicon.html" -%}
+</head>

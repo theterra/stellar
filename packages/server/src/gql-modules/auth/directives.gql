@@ -1,0 +1,4 @@
+#import "gql-modules/auth/enums.gql"
+
+directive @authenticated on OBJECT | FIELD_DEFINITION
+directive @authorized(role: [Role] = [ADMIN]) on OBJECT | FIELD_DEFINITION
